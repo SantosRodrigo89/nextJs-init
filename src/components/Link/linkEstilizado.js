@@ -8,4 +8,6 @@ const LinkEstilizado = React.forwardRef(({ onClick, href, children }, ref) => {
   );
 });
 
+LinkEstilizado.displayName = 'LinkEstilizado';
+
 export default LinkEstilizado;
