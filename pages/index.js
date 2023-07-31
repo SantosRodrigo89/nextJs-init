@@ -1,10 +1,26 @@
 import Link from "../src/components/Link";
-import LinkEstilizado from "../src/components/Link/linkEstilizado";
+import React from "react";
+
+function Title({ children, as }) {
+  const Tag = as;
+  return (
+    <React.Fragment>
+      <Tag>{children}</Tag>
+      <style jsx>
+        {`
+          ${Tag} {
+            color: red;
+          }
+        `}
+      </style>
+    </React.Fragment>
+  );
+}
 
 export default function HomePage() {
   return (
     <div>
-      <LinkEstilizado>Alura Cases</LinkEstilizado>
+      <Title as="h1">Alura Cases</Title>
       <Link href="/faq">Ir para página do FAQ</Link>
     </div>
   );
