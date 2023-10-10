@@ -3,8 +3,8 @@ import Link from '../../components/Link'
 import { theme } from '../../theme/theme';
 import { Image, Box, Text, Icon, Input, Button } from '../../theme/components';
 
-const LOGO_ALURA_URL = 'http://placehold.it/94x44';
-const SIDE_IMAGE_URL = 'http://placehold.it/2878x1640'
+const LOGO_ALURA_URL = '/images/logo.png';
+const SIDE_IMAGE_URL = '/images/photo.jpg'
 
 function SideImage() {
   return (
