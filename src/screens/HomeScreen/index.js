@@ -85,7 +85,7 @@ function SideImage() {
               },
             }}
             src={SIDE_IMAGE_URL}
-            alt="Treinamento com a roberta arcoverde no alura cases, falando sobre o stackoverflow"
+            alt="estatua de prometheu e logo"
           />
         </Box>
       </Box>
@@ -147,10 +147,10 @@ export default function HomeScreen() {
                 <Image
                   styleSheet={{
                     width: "auto",
-                    height: theme.space.x11,
+                    height: theme.space.x32,
                   }}
                   src={LOGO_ALURA_URL}
-                  alt="Logo Alura"
+                  alt="Logo Prometech Labs"
                 />
               </Box>
               <Box
@@ -228,7 +228,7 @@ export default function HomeScreen() {
                       color: theme.colors.neutral["900"],
                     }}
                   >
-                    Alura Cases
+                    Prometech Labs
                   </Text>
                   <Text
                     as="p"
@@ -238,7 +238,12 @@ export default function HomeScreen() {
                       marginTop: theme.space.x6,
                     }}
                   >
-                    Aqui você vai ter acesso a discussões avançadas: as principais decisões sobre arquitetura e design de sistemas. Aprenda através das descobertas que as principais empresas de tecnologia enfrentam!
+                    
+Bem-vindo à Prometech Labs - Seu Parceiro em Desenvolvimento de Sites!
+
+Somos especializados em React e Node.js, criando sites atraentes e eficientes. Oferecemos soluções personalizadas, garantindo desempenho e suporte contínuo.
+
+
                   </Text>
                   <Text
                     as="p"
@@ -248,7 +253,7 @@ export default function HomeScreen() {
                       marginTop: theme.space.x6,
                     }}
                   >
-                    Quer testar antes de todo mundo?
+                    Contate-nos para transformar sua visão digital em realidade!
                   </Text>
                 </Box>
                 <Box
