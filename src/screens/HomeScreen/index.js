@@ -1,10 +1,11 @@
-import Footer from '../../components/patterns/Footer'
-import Link from '../../components/Link'
-import { theme } from '../../theme/theme';
-import { Image, Box, Text, Icon, Input, Button } from '../../theme/components';
+import Head from "next/head";
+import Footer from "../../components/patterns/Footer";
+import Link from "../../components/Link";
+import { theme } from "../../theme/theme";
+import { Image, Box, Text, Icon, Input, Button } from "../../theme/components";
 
-const LOGO_ALURA_URL = '/images/logo.png';
-const SIDE_IMAGE_URL = '/images/photo.jpg'
+const LOGO_ALURA_URL = "/images/logo.png";
+const SIDE_IMAGE_URL = "/images/photo.jpg";
 
 function SideImage() {
   return (
@@ -14,11 +15,11 @@ function SideImage() {
           md: theme.space.x8,
         },
         marginHorizontal: {
-          sm: 'auto'
+          sm: "auto",
         },
         maxWidth: {
           sm: theme.space.xcontainer_md,
-        }
+        },
       }}
     >
       <Box
@@ -26,7 +27,7 @@ function SideImage() {
           top: 0,
           bottom: 0,
           right: {
-            lg: theme.space.x0
+            lg: theme.space.x0,
           },
           width: {
             lg: theme.space["x1/2"],
@@ -39,21 +40,21 @@ function SideImage() {
             lg: theme.space.x16,
           },
           position: {
-            sm: 'relative',
-            lg: 'absolute',
-          }
+            sm: "relative",
+            lg: "absolute",
+          },
         }}
       >
-        <Box 
+        <Box
           styleSheet={{
             height: {
               lg: theme.space["x1/1"],
             },
             maxWidth: {
               sm: theme.space.xcontainer_md,
-              lg: 'none'
+              lg: "none",
             },
-            position: 'relative',
+            position: "relative",
             paddingHorizontal: {
               sm: theme.space.x0,
             },
@@ -64,7 +65,7 @@ function SideImage() {
               lg: `-${theme.space.x40}`,
             },
             marginHorizontal: {
-              sm: 'auto',
+              sm: "auto",
             },
           }}
         >
@@ -90,12 +91,18 @@ function SideImage() {
         </Box>
       </Box>
     </Box>
-  )
+  );
 }
 
 export default function HomeScreen() {
   return (
     <Box>
+      <Head>
+        <title>
+          {" "}
+          Prometech Labs - Seu Parceiro em Desenvolvimento de Sites!
+        </title>
+      </Head>
       <Box
         as="main"
         styleSheet={{
@@ -105,9 +112,9 @@ export default function HomeScreen() {
       >
         <Box
           styleSheet={{
-            overflow: 'hidden',
+            overflow: "hidden",
             position: {
-              lg: 'relative',
+              lg: "relative",
             },
             paddingTop: {
               xs: theme.space.x6,
@@ -121,7 +128,7 @@ export default function HomeScreen() {
         >
           <Box
             styleSheet={{
-              marginHorizontal: 'auto',
+              marginHorizontal: "auto",
               paddingHorizontal: {
                 xs: theme.space.x4,
                 sm: theme.space.x6,
@@ -139,7 +146,7 @@ export default function HomeScreen() {
               },
               gridTemplateColumns: {
                 lg: "repeat(2, minmax(0, 1fr))",
-              }
+              },
             }}
           >
             <Box>
@@ -183,12 +190,12 @@ export default function HomeScreen() {
                         borderRadius: theme.space.x64,
                         color: theme.colors.primary["400"],
                         backgroundColor: theme.colors.primary["100"],
-                        paddingHorizontal: theme.space['x2.5'],
-                        paddingVertical: theme.space['x1'],
+                        paddingHorizontal: theme.space["x2.5"],
+                        paddingVertical: theme.space["x1"],
                         marginRight: theme.space.x2,
                         marginBottom: {
                           xs: theme.space.x2,
-                          sm: theme.space.x0
+                          sm: theme.space.x0,
                         },
                       }}
                     >
@@ -198,16 +205,16 @@ export default function HomeScreen() {
                       styleSheet={{
                         textVariant: theme.typography.variants.body4,
                         fontWeight: "600",
-                        display: 'inline-flex',
+                        display: "inline-flex",
                         borderRadius: theme.space.x64,
                         color: theme.colors.primary["400"],
-                        alignItems: 'center',
+                        alignItems: "center",
                       }}
                     >
                       <Text>Confira as principais dúvidas</Text>
                       <Icon
                         styleSheet={{
-                          iconVariant: 'chevronRight',
+                          iconVariant: "chevronRight",
                           marginLeft: theme.space.xpx,
                         }}
                         aria-hidden="true"
@@ -238,12 +245,10 @@ export default function HomeScreen() {
                       marginTop: theme.space.x6,
                     }}
                   >
-                    
-Bem-vindo à Prometech Labs - Seu Parceiro em Desenvolvimento de Sites!
-
-Somos especializados em React e Node.js, criando sites atraentes e eficientes. Oferecemos soluções personalizadas, garantindo desempenho e suporte contínuo.
-
-
+                    Bem-vindo à Prometech Labs - Seu Parceiro em Desenvolvimento
+                    de Sites! Somos especializados em React e Node.js, criando
+                    sites atraentes e eficientes. Oferecemos soluções
+                    personalizadas, garantindo desempenho e suporte contínuo.
                   </Text>
                   <Text
                     as="p"
@@ -261,15 +266,15 @@ Somos especializados em React e Node.js, criando sites atraentes e eficientes. O
                   action="#"
                   styleSheet={{
                     display: {
-                      sm: 'flex',
+                      sm: "flex",
                     },
                     marginTop: theme.space.x12,
                     width: {
-                      sm: theme.space['x1/1'],
+                      sm: theme.space["x1/1"],
                     },
                     maxWidth: {
                       sm: theme.space.xcontainer_lg,
-                    }
+                    },
                   }}
                 >
                   <Box
@@ -293,7 +298,7 @@ Somos especializados em React e Node.js, criando sites atraentes e eficientes. O
                       placeholder="Coloque seu email aqui"
                     />
                   </Box>
-                  <Box 
+                  <Box
                     styleSheet={{
                       marginTop: {
                         xs: theme.space.x4,
@@ -321,5 +326,5 @@ Somos especializados em React e Node.js, criando sites atraentes e eficientes. O
       </Box>
       <Footer />
     </Box>
-  )
+  );
 }
