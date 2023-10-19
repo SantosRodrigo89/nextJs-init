@@ -24,6 +24,7 @@ function renderCSSValue(cssPropName, cssPropValue) {
 
   return cssPropName + ':' + cssPropValue + ';';
 }
+
 function renderCSS(props, currentBreakpoint) {
   if (!props) return '';
 
@@ -45,11 +46,11 @@ function renderCSS(props, currentBreakpoint) {
     }).filter(Boolean).join('');
 }
 
-export const Box = React.forwardRef(({
+export const Box = React.forwardRef(function BoxComponent({
   as,
   styleSheet: { focus, hover, srOnly, ...styleSheet },
   ...props
-}, ref) => {
+}, ref) {
   const Tag = as || 'div';
 
   return (
@@ -114,6 +115,8 @@ export const Box = React.forwardRef(({
   )
 });
 
+Box.displayName = 'Box';
+
 Box.defaultProps = {
   styleSheet: {},
 };
@@ -122,7 +125,7 @@ export function Icon({
   as,
   styleSheet: initialStyleSheet,
   ...props
-  }) {
+}) {
   const Tag = 'svg';
   const {
     iconVariant,
@@ -131,9 +134,9 @@ export function Icon({
     ...restStyleSheet
   } = initialStyleSheet;
   const styleSheet = {
-      width: '1.5ch',
-      height: '1.5ch',
-      ...restStyleSheet
+    width: '1.5ch',
+    height: '1.5ch',
+    ...restStyleSheet
   };
 
   return (
@@ -149,7 +152,9 @@ export function Icon({
   )
 }
 
-export const Text = React.forwardRef(({ as, styleSheet, ...props }, ref) => {
+Icon.displayName = 'Icon';
+
+export const Text = React.forwardRef(function TextComponent({ as, styleSheet, ...props }, ref) {
   const {
     textVariant = {
       fontSize: 'inherit',
@@ -167,6 +172,9 @@ export const Text = React.forwardRef(({ as, styleSheet, ...props }, ref) => {
     />
   )
 });
+
+Text.displayName = 'Text';
+
 Text.defaultProps = {
   styleSheet: {},
 };
@@ -179,15 +187,16 @@ export function Image({ as, ...props }) {
     ...imageProps
   } = props;
 
-
   return (
     <Box as={tag} {...imageProps} />
   );
 }
+
+Image.displayName = 'Image';
+
 Image.defaultProps = {
   styleSheet: {},
 };
-
 
 export function Input({ as, styleSheet, ...props }) {
   const tag = 'input';
@@ -210,11 +219,13 @@ export function Input({ as, styleSheet, ...props }) {
     ...styleSheet,
   };
 
-
   return (
     <Text as={tag} styleSheet={finalStyleSheet} {...props} />
   );
 }
+
+Input.displayName = 'Input';
+
 Input.defaultProps = {
   styleSheet: {},
 };
@@ -254,11 +265,13 @@ export function Button({ as, styleSheet, ...props }) {
     ...restStyleSheet,
   };
 
-
   return (
     <Text as={tag} styleSheet={finalStyleSheet} {...props} />
   );
 }
+
+Button.displayName = 'Button';
+
 Button.defaultProps = {
   styleSheet: {},
 };
