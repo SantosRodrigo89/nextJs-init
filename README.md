@@ -22,6 +22,10 @@ Este repositório contém a Landing Page da Prometech Labs, uma empresa fictíci
 
 A aplicação estará disponível em http://localhost:3000.
 
+## Acesso Online
+
+A Landing Page da Prometech Labs está disponível online em [https://next-js-init-oewblwxnw-santosrodrigo89.vercel.app/](https://next-js-init-oewblwxnw-santosrodrigo89.vercel.app/).
+
 ## Contribuindo
 
 Sinta-se à vontade para contribuir com este projeto abrindo pull requests ou reportando issues.
