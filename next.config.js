@@ -6,7 +6,7 @@ module.exports = {
         source: "/perguntas",
         destination: "/faq/",
         permanent: true,
-      },
+      }
     ];
   },
 };

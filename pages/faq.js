@@ -20,8 +20,6 @@ export async function getStaticProps() {
 }
 
 export default function FAQPage({ faq }) {
- 
-
   return (
     <div>
        <Head>
