@@ -6,6 +6,11 @@ module.exports = {
         source: "/perguntas",
         destination: "/faq/",
         permanent: true,
+      },
+      {
+        source: "/sair",
+        destination: "/api/auth/logout",
+        permanent: true,
       }
     ];
   },
