@@ -24,7 +24,7 @@ A aplicação estará disponível em http://localhost:3000.
 
 ## Acesso Online
 
-A Landing Page da Prometech Labs está disponível online em [https://next-js-init-oewblwxnw-santosrodrigo89.vercel.app/](https://next-js-init-oewblwxnw-santosrodrigo89.vercel.app/).
+A Landing Page da Prometech Labs está disponível online em [PROMETECH LABS](https://prometech-labs.vercel.app/).
 
 ## Contribuindo
 
