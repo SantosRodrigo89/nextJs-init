@@ -337,5 +337,5 @@ export default function HomeScreen() {
     );
   }
 
-  return <a href="/api/auth/login">Login</a>;
+  return <Link href="/api/auth/login">Login</Link>;
 }
