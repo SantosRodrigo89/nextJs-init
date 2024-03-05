@@ -1,12 +1,12 @@
-import Head from "next/head";
-import Footer from "../../components/patterns/Footer";
-import Link from "../../components/Link";
-import { theme } from "../../theme/theme";
-import { Image, Box, Text, Icon, Input, Button } from "../../theme/components";
+import Head from 'next/head';
+import Footer from '../../components/patterns/Footer';
+import Link from '../../components/Link';
+import { theme } from '../../theme/theme';
+import { Image, Box, Text, Icon, Input, Button } from '../../theme/components';
 import { useUser } from '@auth0/nextjs-auth0/client';
 
-const LOGO_ALURA_URL = "/images/logo.png";
-const SIDE_IMAGE_URL = "/images/photo.jpg";
+const LOGO_ALURA_URL = '/images/logo.png';
+const SIDE_IMAGE_URL = '/images/photo.jpg';
 
 function SideImage() {
   return (
@@ -16,7 +16,7 @@ function SideImage() {
           md: theme.space.x8,
         },
         marginHorizontal: {
-          sm: "auto",
+          sm: 'auto',
         },
         maxWidth: {
           sm: theme.space.xcontainer_md,
@@ -31,7 +31,7 @@ function SideImage() {
             lg: theme.space.x0,
           },
           width: {
-            lg: theme.space["x1/2"],
+            lg: theme.space['x1/2'],
           },
           paddingTop: {
             xs: theme.space.x12,
@@ -41,21 +41,21 @@ function SideImage() {
             lg: theme.space.x16,
           },
           position: {
-            sm: "relative",
-            lg: "absolute",
+            sm: 'relative',
+            lg: 'absolute',
           },
         }}
       >
         <Box
           styleSheet={{
             height: {
-              lg: theme.space["x1/1"],
+              lg: theme.space['x1/1'],
             },
             maxWidth: {
               sm: theme.space.xcontainer_md,
-              lg: "none",
+              lg: 'none',
             },
-            position: "relative",
+            position: 'relative',
             paddingHorizontal: {
               sm: theme.space.x0,
             },
@@ -66,7 +66,7 @@ function SideImage() {
               lg: `-${theme.space.x40}`,
             },
             marginHorizontal: {
-              sm: "auto",
+              sm: 'auto',
             },
           }}
         >
@@ -77,17 +77,17 @@ function SideImage() {
                 md: theme.space.x4,
               },
               maxWidth: {
-                lg: "none",
+                lg: 'none',
               },
               width: {
-                lg: "auto",
+                lg: 'auto',
               },
               height: {
-                lg: theme.space["x1/1"],
+                lg: theme.space['x1/1'],
               },
             }}
             src={SIDE_IMAGE_URL}
-            alt="estatua de prometheu e logo"
+            alt='estatua de prometheu e logo'
           />
         </Box>
       </Box>
@@ -96,8 +96,7 @@ function SideImage() {
 }
 
 export default function HomeScreen() {
-
-  const { user, error, isLoading} = useUser();
+  const { user, error, isLoading } = useUser();
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
@@ -106,23 +105,20 @@ export default function HomeScreen() {
     return (
       <Box>
         <Head>
-          <title>
-            {" "}
-            Prometech Labs - Seu Parceiro em Desenvolvimento de Sites!
-          </title>
+          <title> Prometech Labs - Seu Parceiro em Desenvolvimento de Sites!</title>
         </Head>
         <Box
-          as="main"
+          as='main'
           styleSheet={{
             flex: 1,
-            backgroundColor: theme.colors.neutral["050"],
+            backgroundColor: theme.colors.neutral['050'],
           }}
         >
           <Box
             styleSheet={{
-              overflow: "hidden",
+              overflow: 'hidden',
               position: {
-                lg: "relative",
+                lg: 'relative',
               },
               paddingTop: {
                 xs: theme.space.x6,
@@ -136,7 +132,7 @@ export default function HomeScreen() {
           >
             <Box
               styleSheet={{
-                marginHorizontal: "auto",
+                marginHorizontal: 'auto',
                 paddingHorizontal: {
                   xs: theme.space.x4,
                   sm: theme.space.x6,
@@ -147,13 +143,13 @@ export default function HomeScreen() {
                   lg: theme.space.xcontainer_lg,
                 },
                 display: {
-                  lg: "grid",
+                  lg: 'grid',
                 },
                 gap: {
                   lg: theme.space.x24,
                 },
                 gridTemplateColumns: {
-                  lg: "repeat(2, minmax(0, 1fr))",
+                  lg: 'repeat(2, minmax(0, 1fr))',
                 },
               }}
             >
@@ -161,11 +157,11 @@ export default function HomeScreen() {
                 <Box>
                   <Image
                     styleSheet={{
-                      width: "auto",
+                      width: 'auto',
                       height: theme.space.x32,
                     }}
                     src={LOGO_ALURA_URL}
-                    alt="Logo Prometech Labs"
+                    alt='Logo Prometech Labs'
                   />
                 </Box>
                 <Box
@@ -178,28 +174,29 @@ export default function HomeScreen() {
                 >
                   <Box>
                     <Link
-                      href="/faq"
+                      href='/faq'
                       styleSheet={{
-                        display: "inline-flex",
+                        display: 'inline-flex',
                         alignItems: {
-                          xs: "flex-start",
-                          sm: "center",
+                          xs: 'flex-start',
+                          sm: 'center',
                         },
                         flexDirection: {
-                          xs: "column",
-                          sm: "row",
+                          xs: 'column',
+                          sm: 'row',
                         },
                       }}
                     >
+                     
                       <Text
                         styleSheet={{
                           textVariant: theme.typography.variants.body4,
-                          fontWeight: "600",
+                          fontWeight: '600',
                           borderRadius: theme.space.x64,
-                          color: theme.colors.primary["400"],
-                          backgroundColor: theme.colors.primary["100"],
-                          paddingHorizontal: theme.space["x2.5"],
-                          paddingVertical: theme.space["x1"],
+                          color: theme.colors.primary['400'],
+                          backgroundColor: theme.colors.primary['100'],
+                          paddingHorizontal: theme.space['x2.5'],
+                          paddingVertical: theme.space['x1'],
                           marginRight: theme.space.x2,
                           marginBottom: {
                             xs: theme.space.x2,
@@ -212,23 +209,24 @@ export default function HomeScreen() {
                       <Text
                         styleSheet={{
                           textVariant: theme.typography.variants.body4,
-                          fontWeight: "600",
-                          display: "inline-flex",
+                          fontWeight: '600',
+                          display: 'inline-flex',
                           borderRadius: theme.space.x64,
-                          color: theme.colors.primary["400"],
-                          alignItems: "center",
+                          color: theme.colors.primary['400'],
+                          alignItems: 'center',
                         }}
                       >
                         <Text>Confira as principais dúvidas</Text>
                         <Icon
                           styleSheet={{
-                            iconVariant: "chevronRight",
+                            iconVariant: 'chevronRight',
                             marginLeft: theme.space.xpx,
                           }}
-                          aria-hidden="true"
+                          aria-hidden='true'
                         />
                       </Text>
                     </Link>
+                    <Link href={'/sair'}>Logout</Link>
                   </Box>
                   <Box
                     styleSheet={{
@@ -237,32 +235,31 @@ export default function HomeScreen() {
                     }}
                   >
                     <Text
-                      as="h1"
+                      as='h1'
                       styleSheet={{
                         textVariant: theme.typography.variants.heading1,
-                        color: theme.colors.neutral["900"],
+                        color: theme.colors.neutral['900'],
                       }}
                     >
                       Prometech Labs
                     </Text>
                     <Text
-                      as="p"
+                      as='p'
                       styleSheet={{
                         textVariant: theme.typography.variants.body1,
-                        color: theme.colors.neutral["500"],
+                        color: theme.colors.neutral['500'],
                         marginTop: theme.space.x6,
                       }}
                     >
-                      Bem-vindo à Prometech Labs - Seu Parceiro em Desenvolvimento
-                      de Sites! Somos especializados em React e Node.js, criando
-                      sites atraentes e eficientes. Oferecemos soluções
-                      personalizadas, garantindo desempenho e suporte contínuo.
+                      Bem-vindo à Prometech Labs - Seu Parceiro em Desenvolvimento de Sites! Somos especializados em
+                      React e Node.js, criando sites atraentes e eficientes. Oferecemos soluções personalizadas,
+                      garantindo desempenho e suporte contínuo.
                     </Text>
                     <Text
-                      as="p"
+                      as='p'
                       styleSheet={{
                         textVariant: theme.typography.variants.body1,
-                        color: theme.colors.neutral["500"],
+                        color: theme.colors.neutral['500'],
                         marginTop: theme.space.x6,
                       }}
                     >
@@ -270,15 +267,15 @@ export default function HomeScreen() {
                     </Text>
                   </Box>
                   <Box
-                    as="form"
-                    action="#"
+                    as='form'
+                    action='#'
                     styleSheet={{
                       display: {
-                        sm: "flex",
+                        sm: 'flex',
                       },
                       marginTop: theme.space.x12,
                       width: {
-                        sm: theme.space["x1/1"],
+                        sm: theme.space['x1/1'],
                       },
                       maxWidth: {
                         sm: theme.space.xcontainer_lg,
@@ -292,19 +289,15 @@ export default function HomeScreen() {
                       }}
                     >
                       <Text
-                        as="label"
-                        htmlFor="email"
+                        as='label'
+                        htmlFor='email'
                         styleSheet={{
                           srOnly: true,
                         }}
                       >
                         Email address
                       </Text>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="Coloque seu email aqui"
-                      />
+                      <Input id='email' type='email' placeholder='Coloque seu email aqui' />
                     </Box>
                     <Box
                       styleSheet={{
@@ -318,7 +311,7 @@ export default function HomeScreen() {
                       }}
                     >
                       <Button
-                        type="submit"
+                        type='submit'
                         // button variant
                       >
                         Cadastrar
@@ -328,7 +321,7 @@ export default function HomeScreen() {
                 </Box>
               </Box>
             </Box>
-  
+
             <SideImage />
           </Box>
         </Box>
@@ -337,5 +330,5 @@ export default function HomeScreen() {
     );
   }
 
-  return <Link href="/api/auth/login">Login</Link>;
+  return <Link href='/api/auth/login'>Login</Link>;
 }
